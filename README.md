@@ -38,7 +38,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```css
 	dependencies {
-	        implementation 'com.github.hoangvuanhdevelopervn:FreeImage:Tag'
+	        implementation 'com.github.hoangvuanhdevelopervn:FreeImage:1.0.0'
 	}
 
 ```

@@ -38,9 +38,16 @@ Add it in your root build.gradle at the end of repositories:
 
 ```css
 	dependencies {
-	        implementation 'com.github.hoangvuanhdevelopervn:FreeImage:1.0.0'
+	        implementation 'com.github.hoangvuanhdevelopervn:FreeImage:Tag'
 	}
 
+```
+
+
+**Step 3. Fix error.**  Add this code in AndroidManifest.xml
+
+```css
+	tools:replace="android:icon,android:roundIcon,android:theme"
 ```
 
 Share this release:

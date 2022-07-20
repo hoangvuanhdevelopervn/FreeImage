@@ -50,6 +50,47 @@ Add it in your root build.gradle at the end of repositories:
 	tools:replace="android:icon,android:roundIcon,android:theme"
 ```
 
+# Usage
+
+```kotlin
+LoadImageFromPexel(this, pexelKey).getListImages(1, object : IPexelListImage {  
+    override fun onSuccess(response: PexelImageResponse) {  
+       // handle data here     
+    }  
+  
+    override fun onError(message: String) {  
+       // handle error here     
+    }  
+  
+})
+
+
+LoadVideoFromPexel(this, pexelKey).getListVideos(1, object : IPexelListVideo {  
+    override fun onSuccess(pexelVideoResponse: PexelVideoResponse) {  
+        Log.wtf("getListVideoPexel", "video: $pexelVideoResponse")  
+    }  
+  
+    override fun onError(message: String) {  
+        Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()  
+    }  
+})
+
+
+
+LoadImageFromUnsplash(this, unsplashKey).getListImageNormal(1, object : IUnsplashListImage {  
+    override fun onSuccess(images: MutableList<UnsplashObject>) {  
+        Log.wtf("LoadImageFromUnsplash", "images: ${images.size}")   
+    }  
+  
+    override fun onError(message: String) {  
+        Log.wtf("LoadImageFromUnsplash", "onError: $message")  
+    }  
+})
+
+
+```
+
+
 Share this release:
 
 [![](https://jitpack.io/v/hoangvuanhdevelopervn/FreeImage.svg)](https://jitpack.io/#)

@@ -239,10 +239,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getListImageFromUnsplash() {
-        LoadImageFromUnsplash(
-            this,
-            unsplashKey
-        ).getListImageNormal(1, object : IUnsplashListImage {
+        LoadImageFromUnsplash(this, unsplashKey).getListImageNormal(1, object : IUnsplashListImage {
             override fun onSuccess(images: MutableList<UnsplashObject>) {
                 Log.wtf("LoadImageFromUnsplash", "images: ${images.size}")
                 for (item in images) {
